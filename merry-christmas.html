@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Christmas Vibes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <style>
+            html {
+                scroll-behavior: smooth;
+                height: 100%;
+            }
+
+            html::-webkit-scrollbar {
+                display: none;
+            }
+
+            body {
+                background-image: linear-gradient(#003cff, #004822);
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: white;
+                font-family: 'Geom', sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                margin: 0;
+                text-align: center;
+                overflow-y: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            #message-screen {
+                font-size: 2rem;
+                font-weight: bold;
+                min-height: 100px;
+                padding: 20px;
+                margin: 10px;
+                color: #E5EAF5;
+                text-shadow: 0 0 20px black;
+                transition: opacity 0.5s;
+            }
+
+            #message {
+                border: white 2px solid;
+                border-radius: 15px;
+                background-color: rgba(255, 255, 255, 0.25);
+                font-size: 1.5rem;
+                font-weight: bold;
+                min-height: 100px;
+                padding: 50px;
+                margin: 10px;
+                color: #E5EAF5;
+                text-shadow: 0 0 20px black;
+                transition: opacity 0.5s;
+                /* Hide the message by default */
+                display: none;
+                text-align: left;
+                width: 500px;
+                height: 300px;
+                overflow-y: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            #message::-webkit-scrollbar {
+                display: none;
+            }
+
+            button {
+                font-family: 'Geom', sans-serif;
+                padding: 15px 30px;
+                font-size: 1.2rem;
+                cursor: pointer;
+                background-color: #003cff;
+                color: white;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                margin: 20px;
+                z-index: 1;
+            }
+
+            button:hover {
+                background-color: #002cbb;
+                color: white;
+            }
+
+            #footer {
+                bottom: 0;
+                position: relative;
+                font-size: 1.2rem;
+                font-weight: bold;
+                min-height: 30px;
+                padding: 10px;
+                color: #948c8c;
+                margin-top: 50px;
+            }
+
+            .appear {
+                animation: fadeIn 0.5s ease-in;
+            }
+
+            #image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+                z-index: 1;
+            }
+
+            #image-1 {
+                width: 200px;
+                border-radius: 10%;
+            }
+
+            /* Animation*/
+            .wrapper {
+                position: fixed;
+                pointer-events: none;
+                width: 100%;
+                height: 100%;
+            }
+            .box div {
+                position: fixed;
+                width: 50px;
+                height: 50px;
+                background-color:transparent;
+            }
+            .box div:nth-child(1) {
+                top: 12%;
+                left: 42%;
+                animation: animate 10s linear infinite;
+            }
+            .box div:nth-child(2) {
+                top: 70%;
+                left: 50%;
+                animation: animate 7s linear infinite;
+            }
+            .box div:nth-child(3) {
+                top: 17%;
+                left: 6%;
+                animation: animate 9s linear infinite;
+            }
+            .box div:nth-child(4) {
+                top: 20%;
+                left: 60%;
+                animation: animate 10s linear infinite;
+            }
+            .box div:nth-child(5) {
+                top: 67%;
+                left: 10%;
+                animation: animate 6s linear infinite;
+            }
+            .box div:nth-child(6) {
+                top: 80%;
+                left: 70%;
+                animation: animate 12s linear infinite;
+            }
+            .box div:nth-child(7) {
+                top: 60%;
+                left: 80%;
+                animation: animate 15s linear infinite;
+            }
+            .box div:nth-child(8) {
+                top: 32%;
+                left: 25%;
+                animation: animate 16s linear infinite;
+            }
+            .box div:nth-child(9) {
+                top: 90%;
+                left: 25%;
+                animation: animate 9s linear infinite;
+            }
+            .box div:nth-child(10) {
+                top: 20%;
+                left: 80%;
+                animation: animate 5s linear infinite;
+            }
+
+            @keyframes animate {
+                0% {
+                    transform: scale(0) translateY(0) rotate(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(0.3) translateY(-90px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="image-container">
+            <img id="image-1" src="my-animation.gif" alt="Animation Gif">
+        </div>
+
+        <div id="message-screen">Merry Christmas Koko!</div>
+
+        <div id="message">
+            Hi Ko Kaslinggam, <br /><br />
+            Merry Christmas ya... <br />
+            Aku bersyukur banget bisa kenal sama Koko.
+            Aku berharap kita masih berhubungan baik sampai natal berikutnya, 
+            bahkan bisa lebih dekat. Sebenernya ada rasa takut juga sih...
+            Koko belum pernah minta fotoku, kita juga belum pernah ketemu. 
+            Apakah aku sesuai ekspektasi Koko? Aku cuma bisa siap-siap untuk semua kemungkinan yang bisa terjadi :&#41;<br /><br />
+            Tapi aku tetep bersyukur banget kok kita bisa kenal dan chat sampe sekarang ini.
+            Semoga aja kehadiranku punya pengaruh ke kehidupan Koko meski sedikit aja hehe.
+            Semangat ya!! Akhir-akhir ini pasti sibuk banget. <br /><br />
+            May the joy of Christmas be with you and your family 🌟 <br /><br />
+            Thank you ^^
+        </div>
+
+        <button onclick="showMessage()">OPEN MESSAGE</button>
+
+        <div id="footer">Cha</div>
+
+        <div class="wrapper">
+            <div class="box">
+                <div><img src="snowflake.png" /></div>
+                <div><img src="snowflake.png" /></div>
+                <div><img src="snowflake.png" /></div>
+                <div><img src="snowflake.png" /></div>
+                <div><img src="snowflake.png" /></div>
+                <div><img src="snowflake.png" /></div>
+                <div><img src="snowflake.png" /></div>
+                <div><img src="snowflake.png" /></div>
+                <div><img src="snowflake.png" /></div>
+                <div><img src="snowflake.png" /></div>
+            </div>
+        </div>
+
+        <script>
+            const file = "pujilah-namaNya.mp3";
+            let audio = new Audio(file);
+            let isPlaying = false;
+
+            function showMessage() {
+                const messageScreen = document.getElementById("message-screen");
+                const message = document.getElementById("message");
+                const startButton = document.querySelector("button");
+
+                if (message.style.display === "none" || message.style.display === "") {
+                    if (!isPlaying) {
+                        audio.play();
+                        isPlaying = true;
+                    }
+
+                    messageScreen.style.display = "none";
+                    message.style.display = "block";
+                    message.classList.add("appear");
+
+                    startButton.innerText = "CLOSE MESSAGE";
+                } else {
+                    messageScreen.style.display = "block";
+                    message.style.display = "none";
+                    message.classList.remove("appear");
+
+                    startButton.innerText = "OPEN MESSAGE";
+                }
+
+                
+            }
+        </script>
+    </body>
+
+</html>
